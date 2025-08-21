@@ -1,0 +1,13 @@
+/* Example: Change navbar background */
+.navbar {
+}
+
+/* Example: Change brand text */
+#displayAdminEmail_welcome{
+    font-size: 0.9rem;
+    color: #4d4747;
+}
+.fa-bell{
+    font-size: 15px;
+}
+    

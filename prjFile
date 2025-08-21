@@ -1,0 +1,26 @@
+Startup News Aggregator Website
+Features:
+ Curated list of latest stories
+ Tags like "Funding", "Success", "Challenges"
+ Archive section
+ Manual data entry
+
+
+/startup-news-aggregator
+│
+├── index.html          ← Main page (curated news)
+├── archive.html        ← Archived news page
+├── entry.html          ← Manual data entry page
+├── css/
+│   └── styles.css      ← All your styling
+├── js/
+│   └── main.js         ← DOM manipulation and interactivity
+└── data/
+    └── news.json       ← (Optional) Static data store for manual entries
+
+
+    a header structure
+    -----------------------------------------------
+| Startup News (logo/title)      [🔍 Search]  |
+| Home | Archive | Submit News | [Tags ▼]     |
+-----------------------------------------------

@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h3 class="mb-3">Manage Tags</h3>
+
+  <!-- Add New Tag -->
+  <form id="tagForm" class="d-flex mb-3">
+    <input type="text" id="tagInput" class="form-control me-2" placeholder="Enter new tag" required>
+    <button type="submit" class="btn btn-primary">Add Tag</button>
+  </form>
+
+  <!-- Tags Table -->
+  <table class="table table-bordered table-striped">
+    <thead class="table-light">
+      <tr>
+        <th style="width: 70%;">Tag Name</th>
+        <th style="width: 30%;">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tagsTable">
+      <!-- Tags will be injected here -->
+    </tbody>
+  </table>
+</div>

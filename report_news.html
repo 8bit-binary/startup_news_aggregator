@@ -1,0 +1,32 @@
+<!---No need of html body title tags since its gonna to be inserted at main content of page-->
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <h1 class="h4 mb-3">Report News</h1>
+
+    <form id="reportForm" class="card p-3">
+      <div class="mb-3">
+        <label class="form-label">Title</label>
+        <input type="text" class="form-control" id="newsTitle" placeholder="Enter news title">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Content</label>
+        <textarea class="form-control" id="newsBody" rows="6" placeholder="Write the report..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Category</label>
+        <select id="newsCategory" class="form-select">
+          <option value="">Select…</option>
+          <option>Politics</option>
+          <option>Business</option>
+          <option>Tech</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <i class="fas fa-paper-plane me-1"></i> Submit
+      </button>
+    </form>
+  </div>
+</div>

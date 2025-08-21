@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive Section - Startup News</title>
+  <link rel="stylesheet" href="Archive.css"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+  <!-- Header (same as index.html) -->
+  <header>
+    <div class="title">
+      <h1 class="heading"><a href="index.html">Startup News</a></h1>
+      
+      <div class="pages">
+        <nav class="pg_nav">
+          <a href="index.html">Home</a>
+          <a href="archive.html" class="active">Archive</a>
+          <a href="#">Submit News</a>
+          <a>
+            <label for="tags">Tags</label>
+            <select id="tags" name="tags_section">
+              <option value="none"></option>
+              <option value="funding">Funding</option>
+              <option value="success">Success</option>
+            </select>
+          </a>
+        </nav>
+      </div>
+
+      <div class="right-block">
+        <p class="search"><i class="fas fa-search"></i> <input type="text" placeholder="search here"></p>
+        <a href="#" class="account"><i class="fa-solid fa-circle-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Archive Section -->
+  <main class="archive-section">
+    <h2 id="Collections"><i class="fa-solid fa-building-user"></i> Top Collections</h2>
+
+    <!-- Search/Filter -->
+    <div class="archive-tools">
+      <input type="text" placeholder="Search collections...">
+      <select>
+        <option value="latest">Sort by Latest</option>
+        <option value="popular">Sort by Popular</option>
+        <option value="oldest">Sort by Oldest</option>
+      </select>
+    </div>
+
+    <!-- Collections -->
+    <div class="Top_Collections">
+      <div class="box">
+        <p>Top Startups</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 24 items</p>
+      </div>
+      <div class="box">
+        <p>Startup Closures</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 42 items</p>
+      </div>
+      <div class="box">
+        <p>Startup Frauds</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 18 items</p>
+      </div>
+      <div class="box">
+        <p>Fraud Causes</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 74 items</p>
+      </div>
+      <div class="box">
+        <p>Funding Rounds</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 54 items</p>
+      </div>
+      <div class="box">
+        <p>Acquisitions</p>
+        <hr>
+        <p class="bottom-tag"><i class="fas fa-file"></i> 28 items</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer (same as index.html) -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Startup News</h3>
+        <p>Your daily dose of startup stories, funding updates, and tech insights.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="#">Submit News</a></li>
+          <li><a href="#">Tags</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <p>Email: contact@startupnews.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Startup News. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+<script src="archive.js"></script>
+</html>

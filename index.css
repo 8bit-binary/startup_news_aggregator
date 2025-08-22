@@ -62,6 +62,7 @@ header {
   white-space: nowrap;
 }
 .heading a {
+  font-family:"Nata Sans", sans-serif;;
   color: var(--clr-text);
 }
 

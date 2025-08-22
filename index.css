@@ -176,7 +176,6 @@ header {
 .breaking,
 .major-development,
 .innovation {
-  font-family: "Josefin Sans", sans-serif;
   border: 1px solid #000;
   box-shadow: 0 8px 11px rgba(0, 0, 0, 0.1);
   transition: background-color 0.5s ease;
@@ -193,6 +192,13 @@ header {
   display: flex;
   flex-direction: column-reverse;
   padding: 0 15px 8px;
+}
+
+.breaking>h1,
+.major-development>h1,
+.innovation>h1{
+  font-family: "Josefin Sans", sans-serif;
+
 }
 
 .news-feed-others {
@@ -452,7 +458,6 @@ header {
   display: block;
 }
 .titleOfTime>h2{
-  text-decoration: underline;
-  
-
+  text-decoration: underline;  
+  font-family:"Concert One", sans-serif;
 }

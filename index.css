@@ -448,3 +448,7 @@ header {
   margin: 10px 0;       
   display: block;
 }
+.titleOfTime{
+  text-decoration: underline;
+  
+}

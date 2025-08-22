@@ -448,7 +448,8 @@ header {
   margin: 10px 0;       
   display: block;
 }
-.titleOfTime{
+.titleOfTime>h2{
   text-decoration: underline;
   
+
 }

@@ -86,7 +86,7 @@ header {
   display: none;
 }
 .pg_nav > a {
-  font-family:"Nunito", sans-serif;;
+  font-family:"Nunito", sans-serif;
   font-size: 1rem;
   padding: 2px 10px;
   color: var(--clr-link);

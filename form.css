@@ -71,7 +71,7 @@ form {
 }
 
 /*Button*/
-#SignUpBtn {
+#SignUpBtn,#authBtn {
   background-color: #D9A299;
   color: #fff;
   border: none;
@@ -83,7 +83,7 @@ form {
   margin-top: 10px;
 }
 
-#SignUpBtn:hover {
+#SignUpBtn:hover , #authBtn:hover {
   background-color: #c48479;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);

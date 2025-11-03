@@ -1,13 +1,62 @@
-/* Example: Change navbar background */
-.navbar {
+header {
+    font-family: "Alan Sans", sans-serif;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background: var(--clr-bg);
+    box-shadow: 0 8px 11px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 10px;
+    margin-bottom: 10px;
 }
 
-/* Example: Change brand text */
-#displayAdminEmail_welcome{
-    font-size: 0.9rem;
-    color: #4d4747;
+.title {
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
-.fa-bell{
-    font-size: 15px;
+
+.reportForm {
+    margin: 20px 40px 40px 40px;
 }
-    
+
+:root {
+  --clr-bg: #007bff;
+  --clr-light: #f8f9fa;
+  --header-height: 60px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-light);
+}
+
+header {
+  background-color: var(--clr-bg);
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+.btn {
+  border-radius: 0.5rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.dropdown-menu {
+  min-width: 200px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}

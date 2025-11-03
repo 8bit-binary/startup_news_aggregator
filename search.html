@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search -- Startup Scoop</title>
+    <link rel="stylesheet" href="search.css" />
+    <link href="fontawesome-free-7.0.0-web/fontawesome-free-7.0.0-web/css/all.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link href="index.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <!--Header-->
+  <header>
+   <!--Main heading-->
+   <div class="title">
+    <h1 class="heading">
+     <a href="index_updated.html" style="font-size: 2.6rem; font-weight: bold; ">
+      Startup Scoop
+     </a>
+    </h1>
+    <div class="pages">
+     <nav class="pg_nav">
+      <a href="index_updated.html">
+       Home
+      </a>
+      <a href="Archive_API_Full_Working.html">
+       Archive
+      </a>
+      <a href="admin.html">
+       Submit
+                        News
+      </a>
+     
+     </nav>
+    </div>
+    <!--Links, references and websites pages -->
+    <div class="right-block">
+     <div class="right-block">
+
+
+      <div class="account-dropdown">
+       <a class="account" href="#">
+        <i class="fa-solid fa-circle-user">
+        </i>
+       </a>
+       <div class="dropdown-menu">
+        <a href="form.html">
+         SignUp
+        </a>
+        <a href="admin.html">
+         Profile
+        </a>
+        <a href="#">
+         Logout
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+<div class="search_real_box">
+        <form class="search" id="searchForm">
+        <input type="text" class="search_box" placeholder="Search...">
+        <button type="submit" class="searchIcon">
+            <i class="fas fa-search"></i>
+        </button>
+        <button type="button" class="filterToggle" id="filterToggleBtn" title="Filters">
+            <i class="fa-solid fa-filter"></i>
+        </button>
+    </form>
+
+    <!--filter panel-->
+    <div class="filter-panel" id="filterPanel" style="display: none;">
+        <label>
+            Sort By:
+            <select id="sortBy">
+                <option value="relevancy">Relevancy</option>
+                <option value="popularity">Popularity</option>
+                <option value="publishedAt">Newest</option>
+            </select>
+        </label>
+        <label>
+            From Date:
+            <input type="date" id="fromDate" max="2025-10-07">
+
+        </label>
+
+        <label>
+            To Date:
+            <input type="date" id="toDate" max="2025-10-07">
+        </label>
+    </div>
+</div>
+
+
+    <!--Displayer-->
+    <hr />
+    <div class="externalNews">
+
+    </div>
+    <div style="text-align: center; margin: 2rem;">
+        <button id="loadMoreBtn" style="display: none;">Load More</button>
+    </div>
+
+    
+</body>
+<script src="search2.js"></script>
+<script src="index.js"></script>
+
+</html>

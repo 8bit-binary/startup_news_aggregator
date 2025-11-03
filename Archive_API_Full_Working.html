@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Archive Section - Startup News</title>
+  <link rel="stylesheet" href="Archive.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    /* Add minimal styles to ensure visibility */
+    .box {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 8px;
+      cursor: pointer;
+    }
+    .box:hover {
+      background-color: #f5f5f5;
+    }
+    .bottom-tag {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+   <!--Header-->
+  <header>
+   <!--Main heading-->
+   <div class="title">
+    <h1 class="heading">
+     <a href="index_updated.html" style="font-size: 2.6rem; font-weight: bold; ">
+      Startup Scoop
+     </a>
+    </h1>
+    <div class="pages">
+     <nav class="pg_nav">
+      <a href="index_updated.html">
+       Home
+      </a>
+      <a href="Archive_API_Full_Working.html">
+       Archive
+      </a>
+      <a href="admin.html">
+       Submit
+                        News
+      </a>
+     
+     </nav>
+    </div>
+    <!--Links, references and websites pages -->
+    <div class="right-block">
+     <div class="right-block">
+
+
+      <div class="account-dropdown">
+       <a class="account" href="#">
+        <i class="fa-solid fa-circle-user">
+        </i>
+       </a>
+       <div class="dropdown-menu">
+        <a href="form.html">
+         SignUp
+        </a>
+        <a href="admin.html">
+         Profile
+        </a>
+        <a href="#">
+         Logout
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header>
+
+  <main class="archive-section">
+    <h2 id="Collections"><i class="fa-solid fa-building-user"></i> Top Collections</h2>
+    <div class="archive-tools">
+      <input type="text" placeholder="Search collections..." />
+
+    </div>
+    <div class="Top_Collections">
+      <div class="box"><p>Top Startups</p><hr><p class="bottom-tag">…</p></div>
+      <div class="box"><p>Startup Closures</p><hr><p class="bottom-tag">…</p></div>
+      <div class="box"><p>Startup Frauds</p><hr><p class="bottom-tag">…</p></div>
+      <div class="box"><p>Fraud Causes</p><hr><p class="bottom-tag">…</p></div>
+      <div class="box"><p>Funding Rounds</p><hr><p class="bottom-tag">…</p></div>
+      <div class="box"><p>Acquisitions</p><hr><p class="bottom-tag">…</p></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Startup News</h3>
+        <p>Your daily dose of startup stories, funding updates, and tech insights.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">Submit News</a></li>
+          <li><a href="#">Tags</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect</h3>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <p>Email: contact@startupnews.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Startup News. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const boxLinks = document.querySelectorAll(".Top_Collections .box");
+
+      boxLinks.forEach(box => {
+        box.addEventListener("click", () => {
+          const category = box.querySelector("p").textContent.trim().toLowerCase();
+          const query = getQueryFromCategory(category);
+          // Create container for results
+          const container = document.createElement("div");
+          container.classList.add("Top_Collections");
+
+          // Replace archive-section content with new heading and results container
+          const main = document.querySelector(".archive-section");
+          main.innerHTML = `<h2>${category.toUpperCase()} Archives</h2>`;
+          main.appendChild(container);
+
+          fetchNews(query, container);
+        });
+      });
+
+      function getQueryFromCategory(cat) {
+        if (cat.includes("startup") && cat.includes("closure")) return "startup shutdown OR closure";
+        if (cat.includes("fraud cause")) return "startup fraud causes OR scam";
+        if (cat.includes("fraud")) return "startup fraud OR scandal";
+        if (cat.includes("acquisition")) return "startup acquisition OR merger";
+        if (cat.includes("funding")) return "startup funding OR investment";
+        if (cat.includes("startup")) return "startup OR founder OR startup journey";
+        return "startup";
+      }
+
+      function fetchNews(query, container) {
+        const apiKey = "befbfacfd5a346b49ae3704b53f5d60e";
+        // To allow more results, remove tight date bounds
+        const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&language=en&pageSize=12&sortBy=relevancy&apiKey=${apiKey}`;
+
+        fetch(url)
+          .then(res => res.json())
+          .then(data => {
+            // If error status
+            if (data.status !== "ok") {
+              console.error("API error:", data);
+              container.innerHTML = "<p>Error retrieving archive news.</p>";
+              return;
+            }
+            const articles = data.articles;
+            if (!articles || articles.length === 0) {
+              container.innerHTML = "<p>No archived news found for this category.</p>";
+              return;
+            }
+            container.innerHTML = ""; // clear
+            articles.forEach(article => {
+              const card = document.createElement("div");
+              card.className = "box";
+              card.innerHTML = `
+                <p>${article.title}</p>
+                <hr>
+                <p class="bottom-tag">
+                  <i class="fas fa-calendar-alt"></i> ${article.publishedAt.split("T")[0]} |
+                  <a href="${article.url}" target="_blank"><i class="fas fa-link"></i> Read</a>
+                </p>
+              `;
+              container.appendChild(card);
+            });
+          })
+          .catch(err => {
+            console.error("Fetch error:", err);
+            container.innerHTML = "<p>Error loading archive news.</p>";
+          });
+      }
+    });
+  </script>
+</body>
+<script src="archive.js"></script>
+</html>

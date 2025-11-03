@@ -37,6 +37,7 @@ ul {
 }
 
 header {
+  font-family: "Alan Sans", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,11 +59,11 @@ header {
 }
 
 .heading {
+  padding-left: 20px;
   font-size: 2.2rem;
   white-space: nowrap;
 }
 .heading a {
-  font-family:"Nata Sans", sans-serif;
   color: var(--clr-text);
 }
 
@@ -86,14 +87,13 @@ header {
   display: none;
 }
 .pg_nav > a {
-  font-family:"Nunito", sans-serif;
   font-size: 1rem;
   padding: 2px 10px;
   color: var(--clr-link);
   transition: color 0.3s ease-in-out;
 }
 .pg_nav > a:hover {
-  color: rgb(228, 160, 59);
+  color: rgb(235, 170, 73);
 }
 
 
@@ -165,6 +165,7 @@ header {
 
 /* my news feed*/
 .news-feed {
+   font-family: "Roboto Condensed", sans-serif;
   margin-top: var(--header-height);
   padding: 20px 15px 0;
   background: var(--clr-bg);
@@ -176,7 +177,6 @@ header {
 .breaking,
 .major-development,
 .innovation {
-  border: 1px solid #000;
   box-shadow: 0 8px 11px rgba(0, 0, 0, 0.1);
   transition: background-color 0.5s ease;
 }
@@ -192,13 +192,6 @@ header {
   display: flex;
   flex-direction: column-reverse;
   padding: 0 15px 8px;
-}
-
-.breaking>h1,
-.major-development>h1,
-.innovation>h1{
-  font-family: "Josefin Sans", sans-serif;
-
 }
 
 .news-feed-others {
@@ -394,6 +387,8 @@ header {
 }
 
 .site-footer {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
   margin-top: 50px;
     padding: 40px 20px;
     border-top: 3px solid #0077ff; 
@@ -457,7 +452,172 @@ header {
   margin: 10px 0;       
   display: block;
 }
-.titleOfTime>h2{
-  text-decoration: underline;  
-  font-family:"Concert One", sans-serif;
+
+
+
+#other-sources {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.news-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+}
+
+.news-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.news-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.news-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.news-card a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsletter{
+  padding-left: 16px;
+}
+.newsletterHR{
+  color: #0077ff;
+}
+
+#subscribeForm{
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .storyline-container {
+      max-width: 100%;
+      overflow-x: auto;
+      padding: 20px 0;
+      background-color: #faf7f3;
+      border-top: 2px solid #ccc;
+    }
+
+    .storyline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .storyline-header h2 {
+      font-size: 2rem;
+      color: #222;
+    }
+
+    .storyline-header button {
+      background: #0077ff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .storyline-header button:hover {
+      background: #0056cc;
+    }
+
+    ul#side_scroll_list {
+      display: flex;
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+      gap: 20px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+    }
+
+    ul#side_scroll_list li {
+      flex: 0 0 300px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    ul#side_scroll_list li h2 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    ul#side_scroll_list li p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    ul#side_scroll_list li a {
+      font-weight: bold;
+      color: #0077ff;
+      text-decoration: none;
+      margin-top: auto;
+    }
+
+    ul#side_scroll_list li a:hover {
+      text-decoration: underline;
+    }
